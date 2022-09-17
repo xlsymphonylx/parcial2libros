@@ -14,7 +14,7 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::all();
-        return view('welcome', $books);
+        return view('welcome', compact('books'));
     }
     public function delete($id)
     {

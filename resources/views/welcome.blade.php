@@ -45,14 +45,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>Mark</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                </tr>
+                @foreach ($books as $book)
+                    <tr>
+                        <td>{{$book->id}}</tf>
+                        <td>{{$book->name}}</td>
+                        <td>{{$book->genre}}</td>
+                        <td>{{$book->author}}</td>
+                        <td>{{$book->isbn}}</td>
+                        <td>{{$book->year}}</td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
